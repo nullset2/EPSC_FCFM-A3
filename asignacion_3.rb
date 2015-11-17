@@ -46,10 +46,14 @@ if ARGV[0] == "-h" || ARGV[0] == "--help"                                       
   exit                                                                                                                                     #Code Type A
 end                                                                                                                                        #Code Type A
 
-#linked list code - improved
-#declaring a struct for the nodes of data
-#values (datums) and address for next node
-
+################################################################
+# Node code - Element of Linked List - improved from assignment 1
+# some changes and refactorings have been performed to
+# make this code reflect what I've learned so far
+# the code has also changed to adapt itself to what's now needed
+# from it in assigment 3
+# has values (two datums per node, x and y) and address for next node
+################################################################
 class Node                                                                                                                                  #Code Type B
   attr_accessor :x, :y, :next #gets and sets for values and next                                                                            #Code Type M
 
@@ -59,7 +63,14 @@ class Node                                                                      
   end                                                                                                                                       #Code Type B
 end                                                                                                                                         #Code Type B
 
-#now we can define a LinkedList class here, which will have a head node location as an attribute
+################################################################
+# Linked List code - improved from assignment 1
+# this has also suffered changes and has been adapted to this assignment
+# more notably, the operations for std deviation are not needed, so they have been deleted
+# or rather, in this case, commented out
+# also, the averaging operations have been adapted to different calculation scenarios
+# according to the requirements in this assignment
+################################################################
 class LinkedList                                                                                                                            #Code Type B
   attr_accessor :head                                                                                                                       #Code Type M
 
@@ -253,7 +264,12 @@ end                                                                             
 #  puts "\nPromedio: %.2f Desviacion estandar: %.2f" % [ avg, stdev ]                                                                       #Code Type D
 #end                                                                                                                                        #Code Type D
 
-puts "(type \"end\" to finish input)"                                                                                                  #Code Type A
+
+################################################################
+# Finally, the following part of the program outputs what has been
+# calculated and evaluates yk as stated in the requirements
+################################################################
+puts "(type \"end\" to finish input)"                                                                                                       #Code Type A
 data = LinkedList.new                                                                                                                       #Code Type A
 puts ">? "                                                                                                                                  #Code Type A
 
